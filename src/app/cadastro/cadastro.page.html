@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <form>
+  
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ng-Model)] = UserCadastro.email></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" name="password" [(ngModel)] = UserCadastro.password></ion-input>
+      </ion-item>
+      <ion-item style="padding-bottom: 20px">
+          <ion-label position="floating">Confirmar a senha</ion-label>
+          <ion-input type="password" name="password_confirmation" [(ngModel)] = UserCadastro.password_confirmation></ion-input>
+        </ion-item>
+     
+      <ion-button type="submit" expand="block" color="" (Click)="realizarCadastro()">Cadastrar</ion-button>
+  
+    </form>
+    
+    <ion-row style="height: 30px"></ion-row>
+    <ion-button expand="block" color="primary">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      Confirmar com o Facebook
+    </ion-button>
+      <ion-button expand="block" color="danger">
+      <ion-icon slot="start" name="logo-googleplus"></ion-icon>
+      Confirmar com o Google
+    </ion-button>
+    <ion-text class="ion-text-right">
+      <p>Não tem conta? <a routerLink="cadastro"
+        routerDirection="forward"> Cadastre-se!</a></p>
+    </ion-text>
+  
+    <ion-img src="../../assets/wize-logo.png" style="height: 100px"></ion-img>
+  
+  
+  
+  </ion-content>

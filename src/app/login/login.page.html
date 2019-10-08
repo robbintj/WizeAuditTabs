@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-text class="ion-text-right">
+      <p>Esqueceu a senha?</p>
+    </ion-text>
+    <ion-button type="submit" expand="block" (click)="realizarLogin()">Login</ion-button>
+
+  </form>
+  
+  <ion-row style="height: 30px"></ion-row>
+  <ion-button expand="block" color="primary">
+    <ion-icon slot="start" name="logo-facebook"></ion-icon>
+    Login com o Facebook
+  </ion-button>
+    <ion-button expand="block" color="danger">
+    <ion-icon slot="start" name="logo-googleplus"></ion-icon>
+    Login com o Google
+  </ion-button>
+  <ion-text class="ion-text-right">
+    <p>Não tem conta? <a routerLink="cadastro"
+      routerDirection="forward"> Cadastre-se!</a></p>
+  </ion-text>
+
+  <ion-img src="../../assets/wize-logo.png"></ion-img>
+
+
+</ion-content>
