@@ -9,7 +9,8 @@ export class AuthService {
 
   constructor(private afa: AngularFireAuth) { }
 
-  login(){
+  login(usuario: User){
+    return this.afa.auth.signInWithEmailAndPassword(usuario.email, usuario.password);
 
 
   }
@@ -19,10 +20,12 @@ export class AuthService {
 
   }
   logout(){
+    return this.afa.auth.signOut();
 
   }
 
   getAuth(){
+    return this.afa.auth;
     
   }
 }

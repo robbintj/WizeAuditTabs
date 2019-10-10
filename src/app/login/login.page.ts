@@ -13,22 +13,23 @@ export class LoginPage implements OnInit {
     private router: Router,
     private navCtrl: NavController,
     private loadingController: LoadingController
+    private authService: 
   ) { }
 
   ngOnInit() {
   }
 
   realizarLogin(){
-    this.loadingController.create({
+    /* this.loadingController.create({
       message: "Realizando login...",
       duration: 3000
     }).then((res) =>{
       res.present();
       res.onDidDismiss().then((dis) =>{
         this.router.navigateByUrl("tabs");
-      })
+      }) 
 
-    })
+    })*/
   }
 
 }
